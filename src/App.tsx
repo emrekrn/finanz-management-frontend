@@ -1,14 +1,14 @@
-import { Button } from "@mui/material";
-import "./App.css";
-import { useAuth } from "react-oidc-context";
+import { Button } from '@mui/material';
+import './App.css';
+import { useAuth } from 'react-oidc-context';
 
 function App() {
   const auth = useAuth();
   const signOutRedirect = () => {
-    const clientId = "lnd9hoaafpivq2breu170mc2e";
-    const logoutUri = "";
+    const clientId = 'lnd9hoaafpivq2breu170mc2e';
+    const logoutUri = '';
     const cognitoDomain =
-      "https://eu-central-1m06aacldh.auth.eu-central-1.amazoncognito.com";
+      'https://eu-central-1m06aacldh.auth.eu-central-1.amazoncognito.com';
     window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
   };
 
